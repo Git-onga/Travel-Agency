@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    
     // Animation on scroll
     const animateOnScroll = () => {
         const elements = document.querySelectorAll('.animate');
