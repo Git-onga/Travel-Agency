@@ -1,0 +1,137 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  border-bottom: 2px solid #f0f0f0;
+}
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .logo span {
+  color: orange;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.navbar a.active,
+.navbar a:hover {
+  border-bottom: 2px solid orange;
+  color: orange;
+}
+
+/* Hero Section */
+.hero {
+  background: url('airport-bg.jpg') center/cover no-repeat;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 18px;
+}
+
+/* Schedule Section */
+.schedule-container {
+  padding: 50px;
+  background: #fafafa;
+}
+.schedule-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.schedule-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+.schedule-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.schedule-card p {
+  margin-bottom: 8px;
+  color: #555;
+}
+.schedule-card button {
+  padding: 10px 15px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.schedule-card button:hover {
+  background: darkorange;
+}
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-container .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.footer-container .logo span {
+  color: orange;
+}
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-links a:hover {
+  color: orange;
+}
+copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
