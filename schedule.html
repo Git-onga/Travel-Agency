@@ -18,7 +18,7 @@
                         <a href="explore.html">Explore</a>
                         <a class="active" href="schedule.html">Schedule</a>
                         <a href="trips.html">Trips</a>
-                        <a href="#">Profile</a>
+                        <a href="profile.html">Profile</a>
                     </div>
                     <button>log-in</button>
                 </nav>
@@ -28,388 +28,400 @@
 
     <main>
         <!-- 🌍 Schedule Section -->
-        <section class="schedule" id="schedule">
-  <div class="container">
-    <h2>Plan Your Stay With Us</h2>
-    <p>Schedule your hotel room, car rental, and special requests in one place.</p>
-
-    <form class="schedule-form" autocomplete="on">
-      <!-- 🎟️ Ticket-Themed Package Selector -->
-      <div class="package-ticket" role="group" aria-labelledby="pkgLabel">
-        <div class="ticket-body">
-          <div class="ticket-left">
-            <h3 id="pkgLabel">Select Package</h3>
-
-            <div class="package-options">
-              <label class="pkg">
-                <input type="radio" name="package" value="solo" checked>
-                <span class="pkg-chip">
-                  <strong>Solo</strong>
-                  <small>1 traveler</small>
-                </span>
-              </label>
-
-              <label class="pkg">
-                <input type="radio" name="package" value="family">
-                <span class="pkg-chip">
-                  <strong>Family</strong>
-                  <small>2–6 travelers</small>
-                </span>
-              </label>
-
-              <label class="pkg">
-                <input type="radio" name="package" value="business">
-                <span class="pkg-chip">
-                  <strong>Business</strong>
-                  <small>exec perks</small>
-                </span>
-              </label>
-
-              <label class="pkg">
-                <input type="radio" name="package" value="group">
-                <span class="pkg-chip">
-                  <strong>Group</strong>
-                  <small>6+ travelers</small>
-                </span>
-              </label>
+        <section class="hero" id="schedule">
+            <div class="container">
+                <h2>Plan Your Stay With Us</h2>
+                <p>Schedule your hotel room, car rental, and special requests in one place.</p>
             </div>
-
-            <div class="ticket-meta">
-              <span class="code">PKG • 2025</span>
-            </div>
-          </div>
-
-          <div class="ticket-right" aria-hidden="true">
-            <div class="barcode"></div>
-            <div class="stub-text">PACKAGE</div>
-          </div>
-        </div>
-      </div>
-      <!-- /Ticket -->
-
-      <!-- Hotel Booking -->
-      <div class="form-group">
-        <label for="checkin">Check-In Date</label>
-        <input type="date" id="checkin" name="checkin" required>
-      </div>
-
-      <div class="form-group">
-        <label for="checkout">Check-Out Date</label>
-        <input type="date" id="checkout" name="checkout" required>
-      </div>
-
-      <div class="form-group">
-        <label for="guests">Number of Guests</label>
-        <input type="number" id="guests" name="guests" min="1" value="1">
-      </div>
-
-      <!-- Car Rental -->
-      <div class="form-group">
-        <label for="car">Do you need a car?</label>
-        <select id="car" name="car">
-          <option value="no">No</option>
-          <option value="economy">Economy Car</option>
-          <option value="suv">SUV</option>
-          <option value="luxury">Luxury Car</option>
-          <option value="van">Van / Minibus</option>
-        </select>
-      </div>
-
-      <!-- Car Type (optional detail) -->
-      <div class="form-group">
-        <label for="carType">Preferred Car Type (optional)</label>
-        <input type="text" id="carType" name="carType" placeholder="e.g., Toyota Yaris, Prado, BMW 5 Series">
-      </div>
-
-      <!-- Special Diet -->
-      <div class="form-group">
-        <label for="diet">Special Diet Requirements</label>
-        <input type="text" id="diet" name="diet" placeholder="e.g., Vegetarian, Gluten-free, Vegan, Halal, Kosher">
-      </div>
-
-      <!-- Other Requests -->
-      <div class="form-group form-group--full">
-        <label for="notes">Other Information</label>
-        <textarea id="notes" name="notes" rows="4" placeholder="Add flight numbers, late check-in, accessibility needs, celebrations, etc."></textarea>
-      </div>
-
-      <!-- Submit -->
-      <div class="form-group form-group--full">
-        <button type="submit" class="btn-submit">Submit Schedule</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-        <section class="booking-section">
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab active">Flight</div>
-                <div class="tab">Hotel</div>
-                <div class="tab">Rent a Car</div>
-                <div class="tab">Payment Methods</div>
-                <div class="tab">Packages</div>
-            </div>
-
-            <!-- Booking Form -->
-            <form class="booking-form">
-                <div class="form-group">
-                    <label for="passengers">Adult Passengers</label>
-                    <select id="passengers">
-                    <option>1 Passenger</option>
-                    <option selected>2 Passengers</option>
-                    <option>3 Passengers</option>
-                    <option>4 passengers</option>
-                    <option>5 passsagers</option>
-                    <option>Group passsagers</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="passengers">Children Passengers &lt;15</label>
-                    <select id="passengers">
-                    <option>1 Child</option>
-                    <option selected>2 Children</option>
-                    <option>3 Children</option>
-                    <option>4 Children</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="class">Class</label>
-                    <select id="class">
-                    <option>Economy</option>
-                    <option selected>Business</option>
-                    <option>First Class</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="from">From</label>
-                    <input type="text" id="from" placeholder="Behance, North America, USA">
-                </div>
-
-                <div class="form-group">
-                    <label for="to">To</label>
-                    <input type="text" id="to" placeholder="Dribbble, Cape Town, SA">
-                </div>
-
-                <div class="form-group">
-                    <label for="departure">Departure</label>
-                    <input type="date" id="departure" value="2025-08-22">
-                </div>
-
-                <div class="form-group">
-                    <label for="return">Return</label>
-                    <input type="date" id="return" value="2025-08-22">
-                </div>
-
-                
-
-                <div class="search-btn">
-                    <button type="submit">Search Flights →</button>
-                </div>
-            </form>
         </section>
-        
-        <section class="booking-section">
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab">Flight</div>
-                <div class="tab active">Hotel</div>
-                <div class="tab">Rent a Car</div>
-                <div class="tab">Payment Methods</div>
-                <div class="tab">Packages</div>
+
+        <section class="package-section">
+            <h3 class="section-intro">We have packages to esure you get the most out of the exprience</h3>
+            <div class="schedule">
+                <div class="package-ticket" role="group" aria-labelledby="pkgLabel">
+                    <div class="ticket-body">
+                        <div class="ticket-left">
+                            <h3 id="pkgLabel">Select Package</h3>
+
+                            <div class="package-options">
+                                <label class="pkg">
+                                    <input type="radio" name="package" value="solo" checked>
+                                    <span class="pkg-chip">
+                                    <strong>Solo</strong>
+                                    <small>1 traveler</small>
+                                    </span>
+                                </label>
+
+                                <label class="pkg">
+                                    <input type="radio" name="package" value="family">
+                                    <span class="pkg-chip">
+                                    <strong>Family</strong>
+                                    <small>2–6 including &LT; child</small>
+                                    </span>
+                                </label>
+
+                                <label class="pkg">
+                                    <input type="radio" name="package" value="business">
+                                    <span class="pkg-chip">
+                                    <strong>Business</strong>
+                                    <small>exec perks</small>
+                                    </span>
+                                </label>
+
+                                <label class="pkg">
+                                    <input type="radio" name="package" value="group">
+                                    <span class="pkg-chip">
+                                    <strong>Group</strong>
+                                    <small>6+ travelers</small>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="ticket-meta">
+                                <span class="code">PKG • 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="ticket-right" aria-hidden="true">
+                            <div class="barcode"></div>
+                            <div class="stub-text">PACKAGE</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Booking Form -->
-            <form class="booking-form">
-                <div class="form-group">
-                    <label for="passengers">Rooms</label>
-                    <select id="passengers">
-                    <option>1 Bedroom</option>
-                    <option selected>2 Bedroom</option>
-                    <option>3 Bedroom</option>
-                    </select>
+            <div class="booking-section">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab active">Flight</div>
+                    <div class="tab">Hotel</div>
+                    <div class="tab">Rent a Car</div>
+                    <div class="tab">Payment Methods</div>
                 </div>
 
-                <div class="form-group">
-                    <label for="class">Class</label>
-                    <select id="class">
-                    <option>Economy</option>
-                    <option selected>Business</option>
-                    <option>First Class</option>
-                    </select>
-                </div>
+                <!-- Booking Form -->
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="passengers">Adult Passengers</label>
+                        <select id="passengers">
+                        <option selected>1 Passenger</option>
+                        <option>2 Passengers</option>
+                        <option>3 Passengers</option>
+                        <option>4 passengers</option>
+                        <option>5 passsagers</option>
+                        <option>Group passsagers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Children Passengers &lt;15</label>
+                        <select id="passengers">
+                        <option selected>No child</option>
+                        <option>1 Child</option>
+                        <option>2 Children</option>
+                        <option>3 Children</option>
+                        <option>4 Children</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="from">Hotel Room</label>
-                    <input type="text" id="from" placeholder="Sarova Whitesand, Mombasa, Kenya">
-                </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class">
+                        <option>Economy</option>
+                        <option selected>Business</option>
+                        <option>First Class</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="departure">Check In</label>
-                    <input type="date" id="departure" value="2025-08-22">
-                </div>
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" id="from" placeholder="JKIA, Nairobi, KENYA">
+                    </div>
 
-                <div class="form-group">
-                    <label for="return">Check Out</label>
-                    <input type="date" id="return" value="2025-08-22">
-                </div>
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="text" id="to" placeholder="Dribbble, Cape Town, SA">
+                    </div>
 
-                <div class="search-btn">
-                    <button type="submit">Schedule Date→</button>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" name="departure" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return">Return</label>
+                        <input type="date" id="return" name="return" required>
+                    </div>
+                    <div class="cta-btn">
+                        <button type="submit">Book Flights →</button>
+                    </div>
+                </form>
+            </div>
+            
         </section>
-        <section class="booking-section">
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab">Flight</div>
-                <div class="tab">Hotel</div>
-                <div class="tab active">Rent a Car</div>
-                <div class="tab">Payment Methods</div>
-                <div class="tab">Packages</div>
+
+        <section class="customize-section">
+            <h3 class="section-intro">Customize your travel the best way you know how.</h3>
+
+            <!-- Flight -->
+            <div class="booking-section">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab active">Flight</div>
+                    <div class="tab">Hotel</div>
+                    <div class="tab">Rent a Car</div>
+                    <div class="tab">Payment Methods</div>
+                </div>
+
+                <!-- Booking Form -->
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="passengers">Adult Passengers</label>
+                        <select id="passengers">
+                        <option selected>1 Passenger</option>
+                        <option>2 Passengers</option>
+                        <option>3 Passengers</option>
+                        <option>4 passengers</option>
+                        <option>5 passsagers</option>
+                        <option>Group passsagers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Children Passengers &lt;15</label>
+                        <select id="passengers">
+                        <option selected>No Child</option>
+                        <option>1 Child</option>
+                        <option>2 Children</option>
+                        <option>3 Children</option>
+                        <option>4 Children</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class">
+                        <option>Economy</option>
+                        <option selected>Business</option>
+                        <option>First Class</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">From</label>
+                        <input type="text" id="location" placeholder="JKIA, Nairobi, KENYA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">To</label>
+                        <input type="text" id="destination" placeholder="Dribbble, Cape Town, SA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" name="departure" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return">Return</label>
+                        <input type="date" id="return" name="retrun">
+                    </div>
+
+                    
+
+                    <div class="cta-btn">
+                        <button type="submit">Book Flights →</button>
+                    </div>
+                </form>
             </div>
-
-            <!-- Booking Form -->
-            <form class="booking-form">
-                <div class="form-group">
-                    <label for="passengers">Car type</label>
-                    <select id="passengers">
-                    <option>SUV</option>
-                    <option selected>Saloon Car</option>
-                    <option>Mini Van</option>
-                    <option>Jeep</option>
-                    </select>
+            <!-- Hotel -->
+            <div class="booking-section">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab">Flight</div>
+                    <div class="tab active">Hotel</div>
+                    <div class="tab">Rent a Car</div>
+                    <div class="tab">Payment Methods</div>
                 </div>
 
-                <div class="form-group">
-                    <label for="class">Pick-Up</label>
-                    <select id="class">
-                    <option>Airpot</option>
-                    <option selected>Hotel</option>
-                    <option>Our Branches</option>
-                    </select>
-                </div>
+                <!-- Booking Form -->
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="from">Hotel Name</label>
+                        <input type="text" id="from" placeholder="Sarova Whitesand, Mombasa, Kenya">
+                    </div>
 
-                <div class="form-group">
-                    <label for="from">Driver's Licence</label>
-                    <input type="text" id="from" placeholder="IDL-B5QTZWJZ">
-                </div>
+                    <div class="form-group">
+                        <label for="passengers">Rooms</label>
+                        <select id="passengers">
+                        <option>1 Bedroom</option>
+                        <option selected>2 Bedroom</option>
+                        <option>3 Bedroom</option>
+                        <option>4 Suit</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="to">Country of Issue</label>
-                    <input type="text" id="to" placeholder="Kenya">
-                </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class">
+                        <option>Economy</option>
+                        <option selected>Business</option>
+                        <option>Luxury</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="departure">Leasing From</label>
-                    <input type="date" id="departure" value="2025-08-22">
-                </div>
+                    <div class="form-group">
+                        <label for="checkin">Check In</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="return">To</label>
-                    <input type="date" id="return" value="2025-08-22">
-                </div>
+                    <div class="form-group">
+                        <label for="checkout">Check Out</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
 
-                
-
-                <div class="search-btn">
-                    <button type="submit">Rent a Car →</button>
-                </div>
-            </form>
-        </section>
-        <section class="booking-section">
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab">Flight</div>
-                <div class="tab">Hotel</div>
-                <div class="tab">Rent a Car</div>
-                <div class="tab active">Payment Methods</div>
-                <div class="tab">Packages</div>
+                    <div class="cta-btn">
+                        <button type="submit">Book a Hotel→</button>
+                    </div>
+                </form>
             </div>
-
-            <!-- Booking Form -->
-            <form class="booking-form">
-                <div class="form-group">
-                    <label for="passengers">Mode of payment</label>
-                    <select id="passengers">
-                    <option>Upfront</option>
-                    <option selected>Instalmets</option>
-                    </select>
+            <!-- Rent a Car -->
+            <div class="booking-section">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab">Flight</div>
+                    <div class="tab">Hotel</div>
+                    <div class="tab active">Rent a Car</div>
+                    <div class="tab">Payment Methods</div>
                 </div>
 
-                <div class="form-group">
-                    <label for="class">Pay Via</label>
-                    <select id="class">
-                    <option>Mobile Money</option>
-                    <option selected>Visa</option>
-                    <option>Credit Card</option>
-                    </select>
-                </div>
+                <!-- Booking Form -->
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="passengers">Car type</label>
+                        <select id="rental">
+                        <option>SUV</option>
+                        <option selected>Saloon Car</option>
+                        <option>Mini Van</option>
+                        <option>Jeep</option>
+                        <option>Van</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="from">Primary Account Number</label>
-                    <input type="text" id="from" placeholder="4539 4512 0398 7356">
-                </div>
+                    <div class="form-group">
+                        <label for="class">Pick-Up</label>
+                        <select id="class">
+                        <option>Airpot</option>
+                        <option selected>Hotel</option>
+                        <option>Our Branches</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="to">Name of the Cardholder</label>
-                    <input type="text" id="to" placeholder="Kenya">
-                </div>
+                    <div class="form-group">
+                        <label for="from">Driver's Licence</label>
+                        <input type="text" id="from" placeholder="IDL-B5QTZWJZ">
+                    </div>
 
-                <div class="form-group">
-                    <label for="departure">Expiry Date</label>
-                    <input type="date" id="departure" value="2025-08-22">
-                </div>
+                    <div class="form-group">
+                        <label for="to">Country of Issue</label>
+                        <input type="text" id="to" placeholder="Kenya">
+                    </div>
 
-                <div class="form-group">
-                    <label for="return">Total Amount: <h2>KES 93,010.32</h2></label>
-                </div>
+                    <div class="form-group">
+                        <label for="from">Leasing From</label>
+                        <input type="date" id="from" name="from" required>
+                    </div>
 
-                
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="date" id="to" name="to" required>
+                    </div>
 
-                <div class="search-btn">
-                    <button type="submit">Make Payment →</button>
-                </div>
-            </form>
-        </section>
-<section class="booking-section">
-            <!-- Tabs -->
-            <div class="tabs">
-                <div class="tab">Flight</div>
-                <div class="tab">Hotel</div>
-                <div class="tab">Rent a Car</div>
-                <div class="tab">Payment Methods</div>
-                <div class="tab active">Packages</div>
+                    
+
+                    <div class="cta-btn">
+                        <button type="submit">Rent a Car →</button>
+                    </div>
+                </form>
             </div>
+            <!-- Payment Methods -->
+            <div class="booking-section">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab">Flight</div>
+                    <div class="tab">Hotel</div>
+                    <div class="tab">Rent a Car</div>
+                    <div class="tab active">Payment Methods</div>
+                </div>
 
-           
+                <!-- Booking Form -->
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="passengers">Mode of payment</label>
+                        <select id="payment">
+                            <option>Upfront</option>
+                            <option selected>Instalmets</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class">Pay Via</label>
+                        <select id="class">
+                            <option>Mobile Money</option>
+                            <option selected>Visa</option>
+                            <option>Credit Card</option>
+                            <option>paypal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pan">Primary Account Number</label>
+                        <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Name of the Cardholder</label>
+                        <input type="text" id="name" placeholder="JohnDoe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="date" id="expiry" name="expiry" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return">Total Amount: <h2>KES 93,010.32</h2></label>
+                    </div>
+
+                    
+
+                    <div class="cta-btn">
+                        <button type="submit">Make Payment →</button>
+                    </div>
+                </form>
+            </div>
         </section>
         <section class="promotion-section">
             <h2>Special Promotions</h2>
             <div class="promotion-cards">
                 <div class="promo-card">
-                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?paris');"></div>
+                    <div class="promo-image" style="background-image: url('pics/Jaipur.jpeg');"></div>
                     <div class="promo-content">
-                    <h3>Paris Getaway</h3>
-                    <p>Fly to Paris with 20% discount on Business Class tickets this season.</p>
+                    <h3>Jaipur Palace</h3>
+                    <p>Have you ever wanted your own Aladin Moment, Jaipur offers that and more.</p>
                     <button>Book Now</button>
                     </div>
                 </div>
                 <div class="promo-card">
-                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?dubai');"></div>
+                    <div class="promo-image" style="background-image: url('pics/India.jpeg');"></div>
                     <div class="promo-content">
-                    <h3>Dubai Adventure</h3>
-                    <p>Enjoy shopping festivals and luxury hotels with exclusive offers.</p>
+                    <h3>India</h3>
+                    <p>Capture the breathtaking Sunrise of the Taj Mahal.</p>
                     <button>Book Now</button>
                     </div>
                 </div>
                 <div class="promo-card">
-                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?newyork');"></div>
+                    <div class="promo-image" style="background-image: url('pics/Mauritius.jpeg');"></div>
                     <div class="promo-content">
-                    <h3>New York Experience</h3>
-                    <p>Discover the Big Apple with our premium travel packages.</p>
+                    <h3>Mauritius</h3>
+                    <p>Swim in the blue costlines and get to see the under waterfall.</p>
                     <button>Book Now</button>
                     </div>
                 </div>

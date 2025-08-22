@@ -25,6 +25,7 @@ html,body{
 }
 
 /* Header */
+
 .site-header{
     position: sticky; 
     top:0; 
@@ -91,83 +92,49 @@ html,body{
     background: #e09c00;
 }
 
+/* Main Section */
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #f8f9fa;
-    margin: 0;
-    padding: 0;
+/* Base section */
+
+.hero {
+    background: linear-gradient(180deg,rgba(0,0,0,0.6), rgba(0, 0, 0, 0.2)),
+                url('pics/London\ Bridge.jpeg') center/cover no-repeat;
+    height: 350px;
 }
 
-.booking-section {
-    max-width: 1100px;
-    margin: 50px auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    padding: 20px;
-}/* Base section */
+.hero .container{
+    padding: 30px;
+    margin: auto;
+    align-items: center;
+    color: white;
+    font-size: clamp(1.25rem, 2.2vw + .6rem, 2rem); 
+
+}
+
+.section-intro{
+    margin-top: 10vh;
+    font-weight: 500;
+    left: 15vw;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+    letter-spacing: 0.2px;
+}
+
 .schedule {
-  background: #f8f9fa;
-  padding: 60px 20px;
-}
-.schedule .container {
-  max-width: 900px;
-  margin: auto;
-  background: #ffffff;
-  padding: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #e4e4e199;
+  padding: 30px 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-.schedule h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 8px;
-  color: #333;
-  letter-spacing: 0.2px;
-}
+
 .schedule p {
   text-align: center;
   margin-bottom: 24px;
   color: #666;
-}
-
-/* Form grid */
-.schedule-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.form-group--full {
-  grid-column: 1 / -1;
-}
-.schedule-form label {
-  font-weight: 600;
-  color: #444;
-  font-size: 14px;
-}
-.schedule-form input,
-.schedule-form select,
-.schedule-form textarea {
-  width: 100%;
-  padding: 12px 12px;
-  border: 1px solid #dcdfe4;
-  border-radius: 10px;
-  font-size: 15px;
-  transition: border 0.25s ease, box-shadow 0.25s ease;
-  background: #fff;
-}
-.schedule-form input:focus,
-.schedule-form select:focus,
-.schedule-form textarea:focus {
-  border-color: #2b7cff;
-  box-shadow: 0 0 0 3px rgba(43,124,255,0.12);
-  outline: none;
 }
 
 /* Submit */
@@ -240,9 +207,9 @@ body {
 }
 
 .package-options {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
 }
 
 /* Hide native radios but keep accessible */
@@ -277,8 +244,8 @@ body {
 
 /* Active state */
 .pkg input[type="radio"]:checked + .pkg-chip {
-  border-color: #2b7cff;
-  box-shadow: 0 0 0 4px rgba(43,124,255,0.10);
+  border-color: #ffb400;
+  box-shadow: 0 0 0 4px rgba(255, 180, 0,0.10);
   background: #f6faff;
 }
 .pkg .pkg-chip:active { transform: translateY(1px); }
@@ -331,6 +298,16 @@ body {
   .package-options { grid-template-columns: repeat(2, 1fr); }
 }
 
+
+.booking-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
 /* Tabs */
 .tabs {
     display: flex;
@@ -348,8 +325,8 @@ body {
 }
 
 .tab.active {
-    color: #000;
-    border-color: #000;
+    color: #ffb400;
+    border-color: #ffb400;
 }
 
 /* Booking form */
@@ -379,15 +356,15 @@ body {
     font-size: 14px;
 }
 
-.search-btn {
+.cta-btn {
     grid-column: span 1;
     align-self: end;
 }
 
-.search-btn button {
+.cta-btn button {
     width: 100%;
     padding: 14px;
-    background: #000;
+    background: #ce441a;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -397,8 +374,8 @@ body {
     transition: 0.3s;
 }
 
-.search-btn button:hover {
-    background: #333;
+.cta-btn button:hover {
+    background: #e8592e;
 }
 
 @media (max-width: 900px) {
