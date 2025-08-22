@@ -8,69 +8,466 @@
 </head>
 <body>
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Wand<span>er</span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="explore.html">Explore</a></li>
-        <li><a href="schedule.html" class="active">Schedule</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">Wand<span>er</span></div>
+                    <div class="menu">
+                        <a href="index.html">Home</a>
+                        <a href="explore.html">Explore</a>
+                        <a class="active" href="schedule.html">Schedule</a>
+                        <a href="trips.html">Trips</a>
+                        <a href="#">Profile</a>
+                    </div>
+                    <button>log-in</button>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Your Travel Schedule</h1>
-      <p>Plan your trips with ease, organize destinations, and keep track of your adventures.</p>
-    </div>
-  </section>
+    <main>
+        <!-- 🌍 Schedule Section -->
+        <section class="schedule" id="schedule">
+  <div class="container">
+    <h2>Plan Your Stay With Us</h2>
+    <p>Schedule your hotel room, car rental, and special requests in one place.</p>
 
-  <!-- Schedule Section -->
-  <section class="schedule-container">
-    <h2>Upcoming Trips</h2>
-    <div class="schedule-grid">
-      <div class="schedule-card">
-        <h3>Morocco</h3>
-        <p><strong>Date:</strong> 15th Oct 2025</p>
-        <p><strong>Activities:</strong> Explore Sahara Desert, Marrakech tour.</p>
-        <button>View Details</button>
+    <form class="schedule-form" autocomplete="on">
+      <!-- 🎟️ Ticket-Themed Package Selector -->
+      <div class="package-ticket" role="group" aria-labelledby="pkgLabel">
+        <div class="ticket-body">
+          <div class="ticket-left">
+            <h3 id="pkgLabel">Select Package</h3>
+
+            <div class="package-options">
+              <label class="pkg">
+                <input type="radio" name="package" value="solo" checked>
+                <span class="pkg-chip">
+                  <strong>Solo</strong>
+                  <small>1 traveler</small>
+                </span>
+              </label>
+
+              <label class="pkg">
+                <input type="radio" name="package" value="family">
+                <span class="pkg-chip">
+                  <strong>Family</strong>
+                  <small>2–6 travelers</small>
+                </span>
+              </label>
+
+              <label class="pkg">
+                <input type="radio" name="package" value="business">
+                <span class="pkg-chip">
+                  <strong>Business</strong>
+                  <small>exec perks</small>
+                </span>
+              </label>
+
+              <label class="pkg">
+                <input type="radio" name="package" value="group">
+                <span class="pkg-chip">
+                  <strong>Group</strong>
+                  <small>6+ travelers</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="ticket-meta">
+              <span class="code">PKG • 2025</span>
+            </div>
+          </div>
+
+          <div class="ticket-right" aria-hidden="true">
+            <div class="barcode"></div>
+            <div class="stub-text">PACKAGE</div>
+          </div>
+        </div>
       </div>
-      <div class="schedule-card">
-        <h3>Kenya</h3>
-        <p><strong>Date:</strong> 1st Dec 2025</p>
-        <p><strong>Activities:</strong> Safari in Maasai Mara, Mt. Kenya hike.</p>
-        <button>View Details</button>
+      <!-- /Ticket -->
+
+      <!-- Hotel Booking -->
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="checkin" required>
       </div>
-      <div class="schedule-card">
-        <h3>France</h3>
-        <p><strong>Date:</strong> 20th Jan 2026</p>
-        <p><strong>Activities:</strong> Eiffel Tower, Louvre Museum, Seine cruise.</p>
-        <button>View Details</button>
+
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
       </div>
-    </div>
-  </section>
+
+      <div class="form-group">
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" value="1">
+      </div>
+
+      <!-- Car Rental -->
+      <div class="form-group">
+        <label for="car">Do you need a car?</label>
+        <select id="car" name="car">
+          <option value="no">No</option>
+          <option value="economy">Economy Car</option>
+          <option value="suv">SUV</option>
+          <option value="luxury">Luxury Car</option>
+          <option value="van">Van / Minibus</option>
+        </select>
+      </div>
+
+      <!-- Car Type (optional detail) -->
+      <div class="form-group">
+        <label for="carType">Preferred Car Type (optional)</label>
+        <input type="text" id="carType" name="carType" placeholder="e.g., Toyota Yaris, Prado, BMW 5 Series">
+      </div>
+
+      <!-- Special Diet -->
+      <div class="form-group">
+        <label for="diet">Special Diet Requirements</label>
+        <input type="text" id="diet" name="diet" placeholder="e.g., Vegetarian, Gluten-free, Vegan, Halal, Kosher">
+      </div>
+
+      <!-- Other Requests -->
+      <div class="form-group form-group--full">
+        <label for="notes">Other Information</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Add flight numbers, late check-in, accessibility needs, celebrations, etc."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group form-group--full">
+        <button type="submit" class="btn-submit">Submit Schedule</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+        <section class="booking-section">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active">Flight</div>
+                <div class="tab">Hotel</div>
+                <div class="tab">Rent a Car</div>
+                <div class="tab">Payment Methods</div>
+                <div class="tab">Packages</div>
+            </div>
+
+            <!-- Booking Form -->
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="passengers">Adult Passengers</label>
+                    <select id="passengers">
+                    <option>1 Passenger</option>
+                    <option selected>2 Passengers</option>
+                    <option>3 Passengers</option>
+                    <option>4 passengers</option>
+                    <option>5 passsagers</option>
+                    <option>Group passsagers</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Children Passengers &lt;15</label>
+                    <select id="passengers">
+                    <option>1 Child</option>
+                    <option selected>2 Children</option>
+                    <option>3 Children</option>
+                    <option>4 Children</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class">
+                    <option>Economy</option>
+                    <option selected>Business</option>
+                    <option>First Class</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <input type="text" id="from" placeholder="Behance, North America, USA">
+                </div>
+
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <input type="text" id="to" placeholder="Dribbble, Cape Town, SA">
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure" value="2025-08-22">
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Return</label>
+                    <input type="date" id="return" value="2025-08-22">
+                </div>
+
+                
+
+                <div class="search-btn">
+                    <button type="submit">Search Flights →</button>
+                </div>
+            </form>
+        </section>
+        
+        <section class="booking-section">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab">Flight</div>
+                <div class="tab active">Hotel</div>
+                <div class="tab">Rent a Car</div>
+                <div class="tab">Payment Methods</div>
+                <div class="tab">Packages</div>
+            </div>
+
+            <!-- Booking Form -->
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="passengers">Rooms</label>
+                    <select id="passengers">
+                    <option>1 Bedroom</option>
+                    <option selected>2 Bedroom</option>
+                    <option>3 Bedroom</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class">
+                    <option>Economy</option>
+                    <option selected>Business</option>
+                    <option>First Class</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="from">Hotel Room</label>
+                    <input type="text" id="from" placeholder="Sarova Whitesand, Mombasa, Kenya">
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Check In</label>
+                    <input type="date" id="departure" value="2025-08-22">
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Check Out</label>
+                    <input type="date" id="return" value="2025-08-22">
+                </div>
+
+                <div class="search-btn">
+                    <button type="submit">Schedule Date→</button>
+                </div>
+            </form>
+        </section>
+        <section class="booking-section">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab">Flight</div>
+                <div class="tab">Hotel</div>
+                <div class="tab active">Rent a Car</div>
+                <div class="tab">Payment Methods</div>
+                <div class="tab">Packages</div>
+            </div>
+
+            <!-- Booking Form -->
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="passengers">Car type</label>
+                    <select id="passengers">
+                    <option>SUV</option>
+                    <option selected>Saloon Car</option>
+                    <option>Mini Van</option>
+                    <option>Jeep</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Pick-Up</label>
+                    <select id="class">
+                    <option>Airpot</option>
+                    <option selected>Hotel</option>
+                    <option>Our Branches</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="from">Driver's Licence</label>
+                    <input type="text" id="from" placeholder="IDL-B5QTZWJZ">
+                </div>
+
+                <div class="form-group">
+                    <label for="to">Country of Issue</label>
+                    <input type="text" id="to" placeholder="Kenya">
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Leasing From</label>
+                    <input type="date" id="departure" value="2025-08-22">
+                </div>
+
+                <div class="form-group">
+                    <label for="return">To</label>
+                    <input type="date" id="return" value="2025-08-22">
+                </div>
+
+                
+
+                <div class="search-btn">
+                    <button type="submit">Rent a Car →</button>
+                </div>
+            </form>
+        </section>
+        <section class="booking-section">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab">Flight</div>
+                <div class="tab">Hotel</div>
+                <div class="tab">Rent a Car</div>
+                <div class="tab active">Payment Methods</div>
+                <div class="tab">Packages</div>
+            </div>
+
+            <!-- Booking Form -->
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="passengers">Mode of payment</label>
+                    <select id="passengers">
+                    <option>Upfront</option>
+                    <option selected>Instalmets</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Pay Via</label>
+                    <select id="class">
+                    <option>Mobile Money</option>
+                    <option selected>Visa</option>
+                    <option>Credit Card</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="from">Primary Account Number</label>
+                    <input type="text" id="from" placeholder="4539 4512 0398 7356">
+                </div>
+
+                <div class="form-group">
+                    <label for="to">Name of the Cardholder</label>
+                    <input type="text" id="to" placeholder="Kenya">
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Expiry Date</label>
+                    <input type="date" id="departure" value="2025-08-22">
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Total Amount: <h2>KES 93,010.32</h2></label>
+                </div>
+
+                
+
+                <div class="search-btn">
+                    <button type="submit">Make Payment →</button>
+                </div>
+            </form>
+        </section>
+<section class="booking-section">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab">Flight</div>
+                <div class="tab">Hotel</div>
+                <div class="tab">Rent a Car</div>
+                <div class="tab">Payment Methods</div>
+                <div class="tab active">Packages</div>
+            </div>
+
+           
+        </section>
+        <section class="promotion-section">
+            <h2>Special Promotions</h2>
+            <div class="promotion-cards">
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?paris');"></div>
+                    <div class="promo-content">
+                    <h3>Paris Getaway</h3>
+                    <p>Fly to Paris with 20% discount on Business Class tickets this season.</p>
+                    <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?dubai');"></div>
+                    <div class="promo-content">
+                    <h3>Dubai Adventure</h3>
+                    <p>Enjoy shopping festivals and luxury hotels with exclusive offers.</p>
+                    <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://source.unsplash.com/400x200/?newyork');"></div>
+                    <div class="promo-content">
+                    <h3>New York Experience</h3>
+                    <p>Discover the Big Apple with our premium travel packages.</p>
+                    <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="logo">Wand<span>er</span></div>
-      <div class="footer-links">
-        <h4>Contact</h4>
-        <p>📧 wanderagency21@gmail.com</p>
-        <p>📞 +254-742842345</p>
-        <p>🔗 wanderagency</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a><br>
-        <a href="explore.html">Explore</a><br>
-        <a href="schedule.html">Schedule</a>
-      </div>
-    </div>
-    <p class="copyright">© 2025 Wander | All Rights Reserved</p>
-  </footer>
+    <footer>
+        <div class="container-links">
+            <t class="logo">Wond<span>er</span></t>
+            <div class="nav-links">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Schedule</a></li>
+                    <li><a>Trips</a></li>
+                    <li><a>Log In</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="cantact-sec">
+                    <i class="fas fa-envelope"></i>
+                    <t>wanderagency@gmail.com</t>
+                </div>
+                <div class="cantact-sec">
+                    <i class="fas fa-phone"></i>
+                    <t>+254-712345678</t>
+                </div>
+            </div>
+            <div class="follow-us">
+            <!-- LinkedIn -->
+                <a href="https://linkedin.com/wonder" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                        <path fill="rgb(1, 209, 250)" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 
+                            53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 
+                            0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 
+                            87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                    </svg>
+                    Wonder Agency
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/wonder" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                        <path fill="rgb(193, 53, 132)" d="M224,202a53,53 0 1,0 53,53A53,53 0 0,0 224,202Zm124.71-41a54,54 
+                            0 0 0-30.21-30.21c-20.89-8.34-70.55-6.42-94.5-6.42s-73.61-1.92-94.5,6.42a54,54 0 0 0-30.21,30.21c-8.34,20.89-6.42,70.55-6.42,94.5
+                            s-1.92,73.61,6.42,94.5a54,54 0 0 0,30.21,30.21c20.89,8.34,70.55,6.42,94.5,6.42s73.61,1.92,94.5-6.42a54,54 0 0 0,30.21-30.21
+                            c8.34-20.89,6.42-70.55,6.42-94.5S357.05,181,348.71,161ZM224,338a84,84 1 1,1 84-84A84,84 0 0,1 224,338Zm85-148a19.6,19.6 
+                            0 1,1 19.6-19.6A19.6,19.6 0 0,1 309,190Z"/>
+                    </svg>
+                    Wonder_Agency
+                </a>
+            </div>
+        </div>
+        <div class="footer-end">
+            <p class="footer-end-content">&copy; 2025   All Rights Reserved  <spam></spam>  Wonder | Privacy Policy Terms of Service</p>
+        </div>
+    </footer>
 </body>
 </html>
