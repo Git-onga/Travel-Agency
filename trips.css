@@ -92,31 +92,22 @@ html,body{
 
 /* Hero Section */
 .hero {
-  background: url('pics/Delhi.jpg') center/cover no-repeat;
+  background: linear-gradient(180deg,rgba(0,0,0,0.6), rgba(0, 0, 0, 0.2)),url('pics/Delhi.jpg') center/cover no-repeat;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  text-align: center;
+  text-align: start;
 }
-
-/* dark overlay */
-
-/* .hero::after{
-    content:""; 
-    position: absolute; 
-    min-height: 108.5vh;
-    inset:-1; 
-    background: linear-gradient(45deg, rgba(0,0,0,.65), rgba(0,0,0,.45) 55%, rgba(0,0,0,.35));
-} */
 
 .hero-text h1 {
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 10px;
 }
+
 .hero-text p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* Schedule Section */

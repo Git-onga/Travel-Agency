@@ -1,12 +1,13 @@
 :root{
-    --bg: #0f0f10;
-    --text: #222;
-    --muted: #666;
-    --white: #fff;
-    --brand: #ffb400;         /* gold accent line + CTA chips */
-    --accent: #d55a00;        /* orange CTA */
-    --card-bg: #f1f2f4;
-    --shadow: 0 12px 24px rgba(0,0,0,.15);
+    --primary-color: #ce441a;
+    --secondary-color: #ffb400;
+    --background-grey-color: #cccccc;
+    --background-light-color: #e4e4e199;
+    --background-dark-color: #1b1a1a;
+    --text-light: #333;
+    --text-dark: #ebebeb;
+    --white: #ffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --radius-lg: 22px;
     --radius-xl: 28px;
     --radius-xxl: 32px;
@@ -23,6 +24,7 @@ html,body{
     color:var(--text); 
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; 
 }
+
 
 /* Header */
 
@@ -58,7 +60,7 @@ html,body{
 }
 
 .logo span{ 
-    color: var(--accent); 
+    color: var(--primary-color); 
 }
 
 .menu{ 
@@ -75,16 +77,17 @@ html,body{
 }
 
 .menu a.active{ 
-    color: var(--accent); 
+    color: var(--primary-color); 
 }
 
 .nav button {
-    background: var(--brand);
+    background: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--white);
     transition: background .3s;
 }
 
@@ -100,6 +103,7 @@ html,body{
     background: linear-gradient(180deg,rgba(0,0,0,0.6), rgba(0, 0, 0, 0.2)),
                 url('pics/London\ Bridge.jpeg') center/cover no-repeat;
     height: 350px;
+    display: flex;
 }
 
 .hero .container{
@@ -136,22 +140,6 @@ html,body{
   margin-bottom: 24px;
   color: #666;
 }
-
-/* Submit */
-.btn-submit {
-  width: 100%;
-  padding: 14px 16px;
-  background: #2b7cff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.05s ease, background 0.2s ease;
-}
-.btn-submit:hover { background: #1f6ae0; }
-.btn-submit:active { transform: translateY(1px); }
 
 /* 🎟️ Ticket-themed package selector */
 .package-ticket {
@@ -364,7 +352,7 @@ html,body{
 .cta-btn button {
     width: 100%;
     padding: 14px;
-    background: #ce441a;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -443,7 +431,7 @@ html,body{
       margin-bottom: 15px;
     }
 
-    .promo-content button {
+    /* .promo-content button {
       background: #000;
       color: #fff;
       padding: 10px 15px;
@@ -452,7 +440,7 @@ html,body{
       cursor: pointer;
       font-weight: bold;
       font-size: 14px;
-    }
+    } */
 
     .promo-content button:hover {
       background: #333;
@@ -509,7 +497,7 @@ footer {
 }
 
 .nav-links ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .contact {
