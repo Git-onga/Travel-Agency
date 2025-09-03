@@ -1,6 +1,6 @@
-# WanderEase - Travel Agency Website
+# Wander - Travel Agency Website
 
-WanderEase is a modern travel agency website that helps users plan trips, explore destinations, book tours, and get inspired for their next adventure.
+Wander is a modern travel agency website that helps users plan trips, explore destinations, book tours, and get inspired for their next adventure.
 
 ## Features
 
@@ -17,7 +17,7 @@ WanderEase is a modern travel agency website that helps users plan trips, explor
 ## Getting Started
 
 1. Clone or download the repository.
-2. Place your images in the `images/` folder as referenced in `index.html`.
+2. Place your images in the `pics/` folder as referenced in `index.html`.
 3. Open `index.html` in your browser.
 
 ## File Structure
@@ -31,4 +31,5 @@ WanderEase is a modern travel agency website that helps users plan trips, explor
 
 - Update images and text in `index.html` to match your agency's branding.
 - Modify styles in `index.css` for colors, fonts, and layout.
+
 - Extend functionality in `index.js` as needed.
