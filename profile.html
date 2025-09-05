@@ -3,136 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Traveler Profile - Terrance Wambugu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7f9;
-      margin: 0;
-      padding: 0;
-    }
-    .profile-container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .profile-header {
-      background: linear-gradient(135deg, #007bff, #00bcd4);
-      color: #fff;
-      padding: 25px;
-      text-align: center;
-    }
-    .profile-header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    .profile-header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-    }
-    .profile-body {
-      padding: 25px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .profile-section {
-      background: #f9fbfc;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #e0e6eb;
-    }
-    .profile-section h2 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #333;
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 5px;
-    }
-    .profile-section p {
-      margin: 8px 0;
-      font-size: 14px;
-      color: #555;
-    }
-    .profile-section span {
-      font-weight: bold;
-      color: #000;
-    }
-    @media (max-width: 700px) {
-      .profile-body {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">Wand<span>er</span></div>
+                    <div class="menu">
+                        <a href="index.html">Home</a>
+                        <a href="explore.html">Explore</a>
+                        <a href="schedule.html">Schedule</a>
+                        <a href="trips.html">Trips</a>
+                        <a  class="active" href="profile.html">Profile</a>
+                    </div>
+                    <button>log-in</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h1>Manage your profile</h1>
+            <p>Edit your personal information, Manage account settings and view your travel reviews.
 
-  <div class="profile-container">
-    <div class="profile-header">
-      <h1>Terrance Wambugu</h1>
-      <p>Traveler Profile</p>
-    </div>
+            <!-- Profile and Bio -->
+            <div class="profile-section">
+                <!-- Left Profile Card -->
+                <div class="profile-card">
+                    <img src="pics/person2.jpeg" alt="Profile Picture">
+                    <h2>John Doe</h2>
+                    <div class="cta-btn">
+                        <button>Edit Profile</button>
+                    </div>
+                </div>
 
-    <div class="profile-body">
-      <!-- Personal Info -->
-      <div class="profile-section">
-        <h2>Personal Information</h2>
-        <p><span>Full Name:</span> Terrance Wambugu</p>
-        <p><span>Date of Birth:</span> 14th May 1990</p>
-        <p><span>Nationality:</span> Kenyan</p>
-        <p><span>Passport No:</span> KZ12345678</p>
-        <p><span>ID No:</span> 12345678</p>
-      </div>
+                <!-- Right Bio Card -->
+                <div class="bio-card">
+                    <h3>Bio & Travel Details</h3>
+                    <div class="bio-grid">
+                        <div><span>Passport No:</span> BK9790XX</div>
+                        <div><span>Nationality:</span> Kenyan</div>
+                        <div><span>Date of Birth:</span> 17 Oct 2003</div>
+                        <div><span>Gender:</span> Prefer not say</div>
+                        <div><span>Phone No:</span> (+254) 732-240XXX</div>
+                        <div><span>Email:</span> user21@gmail.com</div>
+                        <div><span>Emergency Contact:</span> (+254) 731-423XXX</div>
+                        <div><span>Home Address:</span> Nairobi, Kenya</div>
+                        <div><span>Languages:</span> English, Kiswahili</div>
+                        <div><span>Insurance Policy:</span> AXA Travel – #TRV9087</div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Contact Info -->
-      <div class="profile-section">
-        <h2>Contact Details</h2>
-        <p><span>Email:</span> terrance.wambugu@example.com</p>
-        <p><span>Phone:</span> +254 712 345 678</p>
-        <p><span>Address:</span> Nairobi, Kenya</p>
-        <p><span>Emergency Contact:</span> +254 722 987 654</p>
-      </div>
+            <!-- Social Media -->
+            <div class="social-media">
+                <a href="#"><i class="fas fa-cog"></i></a>
+                <a href="#"><i class="fas fa-question"></i></a>
+                <a href="#"><i class="fas fa-universal-access"></i></a>
+            </div>
 
-      <!-- Travel Preferences -->
-      <div class="profile-section">
-        <h2>Travel Preferences</h2>
-        <p><span>Preferred Package:</span> Business Traveler</p>
-        <p><span>Hotel Room:</span> Executive Suite</p>
-        <p><span>Car Preference:</span> SUV / 4x4</p>
-        <p><span>Flight Class:</span> Business Class</p>
-        <p><span>Special Diet:</span> Vegetarian</p>
-      </div>
+            <!-- Reviews -->
+            <div class="reviews">
+                <h3>Reviews & Ratings</h3>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="username">Nairobi Trip</span>
+                            <span class="rating">★★★★☆ (4/5)</span>
+                        </div>
+                        <div class="review-text">
+                            The trip to Nairobi National Park was amazing! The safari guide was very knowledgeable 
+                            and we saw lions, giraffes, and even a rhino. I would definitely recommend it.
+                        </div>
+                        <div class="review-date">
+                            Reviewed on: Sept 5, 2025
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="username">Morroco Trip</span>
+                            <span class="rating">★★★★☆ (4/5)</span>
+                        </div>
+                        <div class="review-text">
+                            Morocco is a sensory overload in the best way possible. Walking through the medinas of Marrakech or Fes feels 
+                            like stepping back in time. The culture is warm and welcoming, though it can feel intense at times with the hustle of vendors
+                        </div>
+                        <div class="review-date">
+                            Reviewed on: April 15, 2025
+                        </div>
+                    </div>
+                                        <div class="review-card">
+                        <div class="review-header">
+                            <span class="username">Santorini Trip</span>
+                            <span class="rating">★★★★★ (5/5)</span>
+                        </div>
+                        <div class="review-text">
+                            Santorini is every bit as stunning as the postcards — whitewashed houses with blue domes, perched above the turquoise Aegean Sea. 
+                            Perfect for relaxation, sunsets, and slow-paced exploration.
+                        </div>
+                        <div class="review-date">
+                            Reviewed on: Dec 20, 2024
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Documents -->
-      <div class="profile-section">
-        <h2>Documents</h2>
-        <p><span>Driver’s License No:</span> KDL-9876543</p>
-        <p><span>Visa No:</span> VZ202509876</p>
-        <p><span>Frequent Flyer ID:</span> KQ-FF12345</p>
-        <p><span>Insurance Policy:</span> TR-INS-456789</p>
-      </div>
+            </div>
 
-      <!-- Payment -->
-      <div class="profile-section">
-        <h2>Payment Details</h2>
-        <p><span>Card Type:</span> Visa Credit Card</p>
-        <p><span>Card No:</span> **** **** **** 4321</p>
-        <p><span>Expiry:</span> 08/28</p>
-        <p><span>Billing Address:</span> Nairobi, Kenya</p>
-      </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container-links">
+            <t class="logo">Wond<span>er</span></t>
+            <div class="nav-links">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Schedule</a></li>
+                    <li><a>Trips</a></li>
+                    <li><a>Log In</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="cantact-sec">
+                    <i class="fas fa-envelope"></i>
+                    <t>wanderagency@gmail.com</t>
+                </div>
+                <div class="cantact-sec">
+                    <i class="fas fa-phone"></i>
+                    <t>+254-712345678</t>
+                </div>
+            </div>
+            <div class="follow-us">
+            <!-- LinkedIn -->
+                <a href="https://linkedin.com/wonder" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                        <path fill="rgb(1, 209, 250)" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 
+                            53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 
+                            0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 
+                            87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                    </svg>
+                    Wonder Agency
+                </a>
 
-      <!-- Notes -->
-      <div class="profile-section">
-        <h2>Other Information</h2>
-        <p><span>Medical Conditions:</span> None</p>
-        <p><span>Allergies:</span> Peanuts</p>
-        <p><span>Special Requests:</span> Airport pickup, late checkout</p>
-      </div>
-    </div>
-  </div>
-
+                <!-- Instagram -->
+                <a href="https://instagram.com/wonder" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                        <path fill="rgb(193, 53, 132)" d="M224,202a53,53 0 1,0 53,53A53,53 0 0,0 224,202Zm124.71-41a54,54 
+                            0 0 0-30.21-30.21c-20.89-8.34-70.55-6.42-94.5-6.42s-73.61-1.92-94.5,6.42a54,54 0 0 0-30.21,30.21c-8.34,20.89-6.42,70.55-6.42,94.5
+                            s-1.92,73.61,6.42,94.5a54,54 0 0 0,30.21,30.21c20.89,8.34,70.55,6.42,94.5,6.42s73.61,1.92,94.5-6.42a54,54 0 0 0,30.21-30.21
+                            c8.34-20.89,6.42-70.55,6.42-94.5S357.05,181,348.71,161ZM224,338a84,84 1 1,1 84-84A84,84 0 0,1 224,338Zm85-148a19.6,19.6 
+                            0 1,1 19.6-19.6A19.6,19.6 0 0,1 309,190Z"/>
+                    </svg>
+                    Wonder_Agency
+                </a>
+            </div>
+        </div>
+        <div class="footer-end">
+            <p class="footer-end-content">&copy; 2025   All Rights Reserved  <spam></spam>  Wonder | Privacy Policy Terms of Service</p>
+        </div>
+    </footer>
+   
 </body>
 </html>

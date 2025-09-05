@@ -82,7 +82,7 @@ section {
 }
 
 .topbar{
-    background: rgba(255,255,255,.85);
+    background: var(--white);
     border-bottom: 5px solid var(--secondary-color);
 }
 

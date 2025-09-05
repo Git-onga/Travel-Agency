@@ -36,8 +36,8 @@ html,body{
 }
 
 .topbar{
-    background: rgba(255,255,255,.85);
-    border-bottom: 3px solid var(--brand);
+    background: var(--white);
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .container{
@@ -532,7 +532,7 @@ footer {
 }
 
 .footer-end {
-    background-color: var(--brand);
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 1px;
     font-size: 0.9rem;
