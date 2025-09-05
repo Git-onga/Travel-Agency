@@ -172,3 +172,9 @@ footer {
   background: var(--secondary-color); text-align: center;
   padding: 1px; font-size: 0.9rem; font-weight: 500; color: #222;
 }
+
+  
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

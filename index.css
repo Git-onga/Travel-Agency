@@ -253,8 +253,3 @@ h2 {
   .trip-form { padding: 30px 20px; }
   .contact-content { grid-template-columns: 1fr; }
 }
-  
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
