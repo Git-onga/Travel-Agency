@@ -16,46 +16,45 @@
 
 .hero-text p {
   font-size: 20px;
+  color: var(--text-dark)
+
 }
 
 /* Schedule Section */
-.schedule-container {
+.upcoming-container {
   padding: 50px;
   background: #fafafa;
 }
-.schedule-container h2 {
+.upcoming-container h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 28px;
 }
-.schedule-grid {
+.upcoming-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-.schedule-card {
+.upcoming-card {
   background: #fff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.schedule-card h3 {
+.upcoming-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.schedule-card p {
+.upcoming-card p {
   margin-bottom: 8px;
   color: #555;
 }
-.schedule-card button {
-  padding: 10px 15px;
-  background: orange;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-.schedule-card button:hover {
+
+.upcoming-card button:hover {
   background: darkorange;
+}
+.upcoming-card:hover {
+    transform: translateY(-5px);
+    transform: scale(1.03)
 }

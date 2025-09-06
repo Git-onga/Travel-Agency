@@ -36,8 +36,6 @@ p {
   line-height: 1.6;
 }
 
-section { height: 95vh; min-width: fit-content; }
-
 /* BUTTONS */
 .cta-btn {
   background: var(--primary-color);
