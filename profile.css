@@ -6,6 +6,9 @@ html,body{
     color:var(--text); 
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; 
 }
+p {
+    margin-left: 0;
+}
 
 /* Profile Section */
 
