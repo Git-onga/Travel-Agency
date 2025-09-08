@@ -209,7 +209,7 @@ p {
     margin-bottom: 20px;
 }
 
-.tab {
+.tab, .package-tab {
     padding: 12px 20px;
     cursor: pointer;
     font-weight: bold;
@@ -218,13 +218,13 @@ p {
     transition: 0.3s;
 }
 
-.tab.active {
+.package-tab.active, .tab.active {
     color: #ffb400;
     border-color: #ffb400;
 }
 
 /* Booking form */
-.booking-form {
+.booking-form, .cbooking-form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
