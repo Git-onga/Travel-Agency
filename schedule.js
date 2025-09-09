@@ -52,7 +52,61 @@ tabs.forEach(tab => {
 
     currentTab = tab.dataset.tab;
     tabsContent.innerHTML = renderBookingForm(currentTab, currentPackage);
+
+    // 🔑 If the payment tab is rendered, we need to attach event listeners to its elements
+    if (currentTab === "payment") {
+        const payViaSelect = document.getElementById("payVia");
+        const details1 = document.getElementById("details-1");
+        const details2 = document.getElementById("details-2");
+        const details3 = document.getElementById("details-3");
+
+        function renderPaymentFields(method) {
+            switch (method) {
+                case "mobile":
+                    details1.innerHTML = `<label>Paybill Number:</label><strong>247247</strong>`;
+                    details2.innerHTML = `<label>Account Number:</label><strong>42129XXX832</strong>`;
+                    details3.innerHTML = `
+                    <label for="mpesa-REF">Mpesa Ref:</label>
+                    <input type="text" id="mpesa-REF" placeholder="e.g AD91B4FQL" required>`;
+                    break;
+                case "visa":
+                case "credit":
+                    details1.innerHTML = `
+                    <label for="pan">Primary Account Number</label>
+                    <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>`;
+                    details2.innerHTML = `
+                    <label for="name">Name of the Cardholder</label>
+                    <input type="text" id="name" placeholder="John Doe" required>`;
+                    details3.innerHTML = `
+                    <label for="expiry">Expiry Date</label>
+                    <input type="date" id="expiry" name="expiry" required>`;
+                    break;
+                case "paypal":
+                    details1.innerHTML = `
+                    <label for="paypalEmail">PayPal Email</label>
+                    <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>`;
+                    details2.innerHTML = "";
+                    details3.innerHTML = "";
+                    break;
+                default:
+                    details1.innerHTML = "";
+                    details2.innerHTML = "";
+                    details3.innerHTML = "";
+            }
+        }
+
+        // initialize + listen
+        renderPaymentFields(payViaSelect.value);
+        payViaSelect.addEventListener("change", (e) => renderPaymentFields(e.target.value));
+    }
+
+    // Make payment button functionality
+    const bookBtn = document.getElementById("book");
+    bookBtn?.addEventListener("click", (e) => {
+        alert("Booking successfull! We have sent yoou an Email with the details.")
+    })
   });
+  
 });
 
 // Rendering function for Hooking the package options
@@ -195,9 +249,9 @@ function renderBookingForm(currentTab, currentPackage) {
         `;
     } else {
         return `
-            <form class="booking-form">
+             <form class="booking-form">
                 <div class="form-group">
-                    <label for="mop">Mode of payment</label>
+                    <label for="passengers">Mode of payment</label>
                     <select id="payment">
                         <option>Upfront</option>
                         <option selected>Instalmets</option>
@@ -205,38 +259,40 @@ function renderBookingForm(currentTab, currentPackage) {
                 </div>
 
                 <div class="form-group">
-                    <label for="pv">Pay Via</label>
-                    <select id="payment">
-                        <option>Mobile Money</option>
-                        <option selected>Visa</option>
-                        <option>Credit Card</option>
-                        <option>paypal</option>
+                    <label for="class">Pay Via</label>
+                    <select id="payVia">
+                        <option value="mobile">Mobile Money</option>
+                        <option value="visa" selected>Visa</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="details-1">
                     <label for="pan">Primary Account Number</label>
                     <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="noc">Name of the Cardholder</label>
-                    <input type="text" id="name" placeholder="JohnDoe" required>
+                <div class="form-group" id="details-2">
+                    <label for="name">Name of the Cardholder</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="details-3">
                     <label for="expiry">Expiry Date</label>
                     <input type="date" id="expiry" name="expiry" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="return">Total Amount: <h2>KES 93,010.32</h2></label>
+                    <label>Total Amount:</label>
+                    <h2>KES 93,010.32</h2>
                 </div>
 
-                <button class="cta-btn" type="submit">Make Payment →</button>
+                <button class="cta-btn" type="submit" id="book">Make Payment →</button>
             </form>
         `;
     }
+
   // Rent a Car + Payment tabs can be handled similarly
 }
 
@@ -411,94 +467,101 @@ ctabs.forEach(ctab => {
 
                 <div class="form-group">
                     <label for="class">Pay Via</label>
-                    <select id="class">
-                        <option>Mobile Money</option>
-                        <option selected>Visa</option>
-                        <option>Credit Card</option>
-                        <option>paypal</option>
+                    <select id="payVia">
+                        <option value="mobile">Mobile Money</option>
+                        <option value="visa" selected>Visa</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="details-1">
                     <label for="pan">Primary Account Number</label>
                     <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="details-2">
                     <label for="name">Name of the Cardholder</label>
-                    <input type="text" id="name" placeholder="JohnDoe" required>
+                    <input type="text" id="name" placeholder="John Doe" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="details-3">
                     <label for="expiry">Expiry Date</label>
                     <input type="date" id="expiry" name="expiry" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="return">Total Amount: <h2>KES 93,010.32</h2></label>
+                    <label>Total Amount:</label>
+                    <h2>KES 93,010.32</h2>
                 </div>
 
-                <button class="cta-btn" type="submit">Make Payment →</button>
+                <button class="cta-btn" type="submit" id="book">Make Payment →</button>
             </form>
         `;
+
+        // 🔑 Now that the form exists, grab elements
+        const payViaSelect = document.getElementById("payVia");
+        const details1 = document.getElementById("details-1");
+        const details2 = document.getElementById("details-2");
+        const details3 = document.getElementById("details-3");
+
+        function renderPaymentFields(method) {
+            switch (method) {
+                case "mobile":
+                details1.innerHTML = `
+                    <label>Paybill Number:</><strong>247247</strong>`;
+                details2.innerHTML = `
+                    <label>Account Number:</label><strong>42129XXX832</strong>`;
+                details3.innerHTML = `
+                    <label for="mpesa-REF">Mpesa Ref:</label>
+                    <input type="text" id="mpesa-REF" placeholder="e.g AD91B4FQL" required>`;
+                break;
+
+                case "visa":
+                case "credit":
+                details1.innerHTML = `
+                    <label for="pan">Primary Account Number</label>
+                    <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>`;
+                details2.innerHTML = `
+                    <label for="name">Name of the Cardholder</label>
+                    <input type="text" id="name" placeholder="John Doe" required>`;
+                details3.innerHTML = `
+                    <label for="expiry">Expiry Date</label>
+                    <input type="date" id="expiry" name="expiry" required>`;
+                break;
+
+                case "paypal":
+                details1.innerHTML = `
+                    <label for="paypalEmail">PayPal Email</label>
+                    <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>`;
+                details2.innerHTML = "";
+                details3.innerHTML = "";
+                break;
+
+                default:
+                details1.innerHTML = "";
+                details2.innerHTML = "";
+                details3.innerHTML = "";
+            }
+        }
+
+        // 🔑 attach event listener now
+        payViaSelect.addEventListener("change", (e) => {
+            renderPaymentFields(e.target.value);
+        });
     }
+
+    // Make payment button functionality
+    const bookBtn = document.getElementById("book");
+    bookBtn?.addEventListener("click", (e) => {
+        alert("Booking successfull! We have sent yoou an Email with the details.")
     })
-})
 
-const payViaSelect = document.getElementById("payVia");
-const paymentDetails = document.getElementById("payment-details");
+    });
+});
 
-function renderPaymentFields(method) {
-  switch (method) {
-    case "mobile":
-      paymentDetails.innerHTML = `
-        <div class="form-group">
-          <label for="phone">Mobile Number</label>
-          <input type="tel" id="phone" placeholder="+254 712 345 678" required>
-        </div>
-      `;
-      break;
-
-    case "visa":
-    case "credit":
-      paymentDetails.innerHTML = `
-        <div class="form-group">
-          <label for="pan">Primary Account Number</label>
-          <input type="text" id="pan" placeholder="4539 4512 0398 7356" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Cardholder Name</label>
-          <input type="text" id="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label for="expiry">Expiry Date</label>
-          <input type="month" id="expiry" required>
-        </div>
-        <div class="form-group">
-          <label for="cvv">CVV</label>
-          <input type="password" id="cvv" maxlength="4" required>
-        </div>
-      `;
-      break;
-
-    case "paypal":
-      paymentDetails.innerHTML = `
-        <div class="form-group">
-          <label for="paypalEmail">PayPal Email</label>
-          <input type="email" id="paypalEmail" placeholder="example@paypal.com" required>
-        </div>
-      `;
-      break;
-
-    default:
-      paymentDetails.innerHTML = "";
-  }
-}
 
 // 🔥 Render initial state
-renderPaymentFields(payViaSelect.value);
+// renderPaymentFields(payViaSelect.value);
 
 // 🔄 Update on change
-payViaSelect.addEventListener("change", (e) => {
-  renderPaymentFields(e.target.value);
-});

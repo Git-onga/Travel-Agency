@@ -38,199 +38,205 @@
         </section>
 
         <section class="package-section">
-            <h3 class="section-intro">We have packages to esure you get the most out of the exprience</h3>
+            <h3 class="section-intro">We have packages to ensure you get the most out of the experience</h3>
+            
+            <!-- Package Selection -->
             <div class="schedule">
                 <div class="package-ticket" role="group" aria-labelledby="pkgLabel">
-                    <div class="ticket-body">
-                        <div class="ticket-left">
-                            <h3 id="pkgLabel">Select Package</h3>
+                <div class="ticket-body">
+                    <div class="ticket-left">
+                    <h3 id="pkgLabel">Select Package</h3>
 
-                            <div class="package-options">
-                                <label class="pkg">
-                                    <input type="radio" name="package" value="solo" checked>
-                                    <span class="pkg-chip">
-                                    <strong>Solo</strong>
-                                    <small>1 traveler</small>
-                                    </span>
-                                </label>
+                    <div class="package-options">
+                        <label class="pkg">
+                        <input type="radio" name="package" value="solo" checked>
+                        <span class="pkg-chip">
+                            <strong>Solo</strong>
+                            <small>1 traveler</small>
+                        </span>
+                        </label>
 
-                                <label class="pkg">
-                                    <input type="radio" name="package" value="family">
-                                    <span class="pkg-chip">
-                                    <strong>Family</strong>
-                                    <small>2–6 including &LT; child</small>
-                                    </span>
-                                </label>
+                        <label class="pkg">
+                        <input type="radio" name="package" value="family">
+                        <span class="pkg-chip">
+                            <strong>Family</strong>
+                            <small>2–6 including &lt; child</small>
+                        </span>
+                        </label>
 
-                                <label class="pkg">
-                                    <input type="radio" name="package" value="business">
-                                    <span class="pkg-chip">
-                                    <strong>Business</strong>
-                                    <small>exec perks</small>
-                                    </span>
-                                </label>
+                        <label class="pkg">
+                        <input type="radio" name="package" value="business">
+                        <span class="pkg-chip">
+                            <strong>Business</strong>
+                            <small>exec perks</small>
+                        </span>
+                        </label>
 
-                                <label class="pkg">
-                                    <input type="radio" name="package" value="group">
-                                    <span class="pkg-chip">
-                                    <strong>Group</strong>
-                                    <small>6+ travelers</small>
-                                    </span>
-                                </label>
-                            </div>
+                        <label class="pkg">
+                        <input type="radio" name="package" value="group">
+                        <span class="pkg-chip">
+                            <strong>Group</strong>
+                            <small>6+ travelers</small>
+                        </span>
+                        </label>
+                    </div>
 
-                            <div class="ticket-meta">
-                                <span class="code">PKG • 2025</span>
-                            </div>
-                        </div>
+                    <div class="ticket-meta">
+                        <span class="code">PKG • 2025</span>
+                    </div>
+                    </div>
 
-                        <div class="ticket-right" aria-hidden="true">
-                            <div class="barcode"></div>
-                            <div class="stub-text">PACKAGE</div>
-                        </div>
+                    <div class="ticket-right" aria-hidden="true">
+                    <div class="barcode"></div>
+                    <div class="stub-text">PACKAGE</div>
                     </div>
                 </div>
+                </div>
             </div>
+
+            <!-- Booking Tabs -->
             <div class="booking-section">
-                <!-- Tabs -->
                 <div class="tabs">
-                    <div class="package-tab active"  data-tab="flight">Flight</div>
-                    <div class="package-tab" data-tab="hotel">Hotel</div>
-                    <div class="package-tab" data-tab="rent">Rent a Car</div>
-                    <div class="package-tab" data-tab="payment">Payment Methods</div>
+                <div class="package-tab active" data-tab="flight">Flight</div>
+                <div class="package-tab" data-tab="hotel">Hotel</div>
+                <div class="package-tab" data-tab="rent">Rent a Car</div>
+                <div class="package-tab" data-tab="payment">Payment Methods</div>
                 </div>
 
                 <!-- Booking Form -->
                 <form class="booking-form">
-                    <div class="form-group">
-                        <label for="passengers">Adult Passengers</label>
-                        <select id="passengers">
-                        <option selected>1 Passenger</option>
-                        <option>2 Passengers</option>
-                        <option>3 Passengers</option>
-                        <option>4 passengers</option>
-                        <option>5 passsagers</option>
-                        <option>Group passsagers</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="passengers">Children Passengers &lt;15</label>
-                        <select id="noChildren">
-                        <option selected>No child</option>
-                        <option>1 Child</option>
-                        <option>2 Children</option>
-                        <option>3 Children</option>
-                        <option>4 Children</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="passengers">Adult Passengers</label>
+                    <select id="passengers">
+                    <option selected>1 Passenger</option>
+                    <option>2 Passengers</option>
+                    <option>3 Passengers</option>
+                    <option>4 passengers</option>
+                    <option>5 passsagers</option>
+                    <option>Group passsagers</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="class">Class</label>
-                        <select id="class">
-                        <option>Economy</option>
-                        <option selected>Business</option>
-                        <option>First Class</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="noChildren">Children Passengers &lt;15</label>
+                    <select id="noChildren">
+                    <option selected>No child</option>
+                    <option>1 Child</option>
+                    <option>2 Children</option>
+                    <option>3 Children</option>
+                    <option>4 Children</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="from">From</label>
-                        <input type="text" id="from" placeholder="JKIA, Nairobi, KENYA">
-                    </div>
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class">
+                    <option>Economy</option>
+                    <option selected>Business</option>
+                    <option>First Class</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="to">To</label>
-                        <input type="text" id="to" placeholder="Dribbble, Cape Town, SA">
-                    </div>
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <input type="text" id="from" placeholder="JKIA, Nairobi, KENYA">
+                </div>
 
-                    <div class="form-group">
-                        <label for="departure">Departure</label>
-                        <input type="date" id="departure" name="departure" required>
-                    </div>
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <input type="text" id="to" placeholder="Dribbble, Cape Town, SA">
+                </div>
 
-                    <div class="form-group">
-                        <label for="return">Return</label>
-                        <input type="date" id="return" name="return" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Go to Next Tab <h2>Hotel →</h2></label>
-                    </div>
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure" name="departure" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Return</label>
+                    <input type="date" id="return" name="return" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Go to Next Tab <h2>Hotel →</h2></label>
+                </div>
                 </form>
             </div>
-            
         </section>
 
+        <!-- Customize Section -->
         <section class="customize-section">
             <h3 class="section-intro">Customize your travel the best way you know how.</h3>
 
             <div class="booking-section">
-                <!-- Tabs -->
                 <div class="tabs">
-                    <div class="tab active">Flight</div>
-                    <div class="tab" >Hotel</div>
-                    <div class="tab" >Rent a Car</div>
-                    <div class="tab" >Payments</div>
+                <div class="tab active">Flight</div>
+                <div class="tab">Hotel</div>
+                <div class="tab">Rent a Car</div>
+                <div class="tab">Payments</div>
                 </div>
 
                 <!-- Booking Form -->
                 <form class="cbooking-form">
-                    <div class="form-group">
-                        <label for="passengers">Adult Passengers</label>
-                        <select id="passengers">
-                        <option selected>1 Passenger</option>
-                        <option>2 Passengers</option>
-                        <option>3 Passengers</option>
-                        <option>4 passengers</option>
-                        <option>5 passsagers</option>
-                        <option>Group passsagers</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="passengers">Children Passengers &lt;15</label>
-                        <select id="passengers">
-                        <option selected>No Child</option>
-                        <option>1 Child</option>
-                        <option>2 Children</option>
-                        <option>3 Children</option>
-                        <option>4 Children</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="passengers">Adult Passengers</label>
+                    <select id="passengers">
+                    <option selected>1 Passenger</option>
+                    <option>2 Passengers</option>
+                    <option>3 Passengers</option>
+                    <option>4 passengers</option>
+                    <option>5 passsagers</option>
+                    <option>Group passsagers</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="class">Class</label>
-                        <select id="class">
-                        <option>Economy</option>
-                        <option selected>Business</option>
-                        <option>First Class</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="children">Children Passengers &lt;15</label>
+                    <select id="children">
+                    <option selected>No Child</option>
+                    <option>1 Child</option>
+                    <option>2 Children</option>
+                    <option>3 Children</option>
+                    <option>4 Children</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="location">From</label>
-                        <input type="text" id="location" placeholder="JKIA, Nairobi, KENYA">
-                    </div>
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class">
+                    <option>Economy</option>
+                    <option selected>Business</option>
+                    <option>First Class</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="destination">To</label>
-                        <input type="text" id="destination" placeholder="Dribbble, Cape Town, SA">
-                    </div>
+                <div class="form-group">
+                    <label for="location">From</label>
+                    <input type="text" id="location" placeholder="JKIA, Nairobi, KENYA">
+                </div>
 
-                    <div class="form-group">
-                        <label for="departure">Departure</label>
-                        <input type="date" id="departure" name="departure" required>
-                    </div>
+                <div class="form-group">
+                    <label for="destination">To</label>
+                    <input type="text" id="destination" placeholder="Dribbble, Cape Town, SA">
+                </div>
 
-                    <div class="form-group">
-                        <label for="return">Return</label>
-                        <input type="date" id="return" name="retrun">
-                    </div>
-                    <div class="form-group">
-                        <label>Go to Next Tab <h2>Hotel →</h2></label>
-                    </div>
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure" name="departure" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Return</label>
+                    <input type="date" id="return" name="retrun">
+                </div>
+
+                <div class="form-group">
+                    <label>Go to Next Tab <h2>Hotel →</h2></label>
+                </div>
                 </form>
             </div>
-           
         </section>
+
         <section class="promotion-section">
             <h2>Special Promotions</h2>
             <div class="promotion-cards">
